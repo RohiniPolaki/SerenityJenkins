@@ -46,7 +46,7 @@ public class HomePage extends PageObject{
 		super(driver);
 	}
 	
-	public void enterFirstName(String text) {
+	public void verifyAndEnterDetailsInFields(String text) {
 		find("//input[@name='firstname']").sendKeys(text);
 		findBy("//input[@name='firstname']").clear();
 		$("//input[@name='firstname']").sendKeys("user");//find the element based on XPATH

@@ -10,7 +10,7 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 		features="src/test/resources/Features",
 		glue="steps",
 		plugin="pretty",
-		tags="@amazon"
+		tags="@Test1"
 		)
 
 public class CucmberTestSuite {

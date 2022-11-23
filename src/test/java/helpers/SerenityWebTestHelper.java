@@ -11,13 +11,16 @@ public class SerenityWebTestHelper {
 
 	HomePage homepage;
 	AmazonPage amazonPage;
+	
+	@Step
+	public void openBrowser() {
+		homepage.open();
+		homepage.getDriver().manage().window().maximize();
+	}
 
 	@Step
 	public void validatebuitinMethods() {
-		homepage.open();
-		// homepage.openUrl(null);
-		homepage.getDriver().manage().window().maximize();
-		homepage.enterFirstName("Test");
+		homepage.verifyAndEnterDetailsInFields("Test");
 		System.out.println("Done");
 	}
 

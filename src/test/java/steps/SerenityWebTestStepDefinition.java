@@ -14,11 +14,19 @@ public class SerenityWebTestStepDefinition {
 	@Steps(shared = true) // maintains single object and shared to all
 	SerenityWebTestHelper serenityWebTesthelper;
 
-	@Given("Open Website and enter text in any field")
+	@Given("Open Website in the browser")
 	public void openWebsiteAndEnterText() {
-		serenityWebTesthelper.validatebuitinMethods();
-		// validateAlertHandlingMethods
+		serenityWebTesthelper.openBrowser();	
+	}
+	
+	@When("Enter the required details in the form")
+	public void enterDetailsInTheForm() {
+		serenityWebTesthelper.validatebuitinMethods();	
+	}
+	@Then("verify the alert handling methods")
+	public void verifyAlerts() {
 		serenityWebTesthelper.validateAlertHandlingMethods();
+		
 	}
 
 	@Given("user searches {string} in Amazon home page")
